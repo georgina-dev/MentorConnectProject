@@ -1,0 +1,15 @@
+create an application dedicated to peer mentorship. the appication should satisfy the following objectives:
+1. enable user registration, proile creation, identity verification
+2. support content sharing across educational and professional domains
+3. facilitate peer collaboration through shared workspaces and discusion channels
+4. promote continuous learning and career development through curated resources and progress tracking.
+the application implementation includes the following technologies:
+1. Angular (front-end)
+2. Django (back-end)
+3. PostgreSQL (database)
+for now i want you to focus on the front-end and the authentication bit of the backend. We'll deal with the rest later. We will also include a AI-powered recommendation system later on to implement intelligent mentor matching.
+this is the suggested palette:    deep forest green - #183F35 , warm cream - #F3F0E6, muted gold - #C5A45D, sage green - #789B78, white - #FFFFFF, and charcoal - #303832.
+mhm... for the pages: login page, register page, the main page, the dashboard page (for each user role), profile page, explore/discover page, mentorship page, messages page, settings page, and admin dashboard.
+users involved: admin, students, mentors, and experts.
+create a main folder called MentorConnect and two subfolders within it: mentorconnect-frontend (Angular-related tasks) and mentorconnect-backend(Django-related tasks).
+Let's do these for now.

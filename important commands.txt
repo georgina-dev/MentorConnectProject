@@ -1,0 +1,21 @@
+~ Angular (frontend)
+-- start Angular server:
+ng serve (http://localhost:4200/)
+
+~ Django (backend)
+-- first, activate virtual environment:
+.\.venv\Scripts\Activate.ps1
+-- python manage.py runserver (http://127/0/0:8000/)
+
+~ PostgreSQL (database)
+-- start PostgreSQL server:
+& "C:\Program Files\PostgreSQL\18\bin\pg_ctl.exe" start -D "C:\Program Files\PostgreSQL\18\data" -l "$env:TEMP\postgresql-startup.log"
+-- check server status:
+ & "C:\Program Files\PostgreSQL\18\bin\pg_ctl.exe" status -D "C:\Program Files\PostgreSQL\18\data"
+
+Best order to start them:
+Postgre
+   |
+Django
+   |
+Angular

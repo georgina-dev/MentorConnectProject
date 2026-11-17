@@ -1,0 +1,96 @@
+
+<div class="login-page">
+
+  <div class="login-card">
+
+    <div class="brand">
+      <h1>MentorConnect</h1>
+      <p>Learn. Connect. Grow.</p>
+    </div>
+
+    <div class="login-content">
+      <h2>Welcome back!</h2>
+      <p class="subtitle">
+        Sign in to continue your learning journey.
+      </p>
+
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            placeholder="Enter your email address"
+          />
+        </div>
+
+        @if (loginForm.controls.email.touched && loginForm.controls.email.hasError('required')) {
+          <small class="error-message">
+            Email address is required.
+          </small>
+        }
+
+        @if (loginForm.controls.email.touched && loginForm.controls.email.hasError('email')) {
+          <small class="error-message">
+            Please enter a valid email address.
+          </small>
+        }
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="password-input-container">
+          <input
+            [type]="passwordVisible ? 'text' : 'password'"
+            id="password"
+            formControlName="password"
+            placeholder="Enter your password"
+          />
+
+          <button
+          type="button"
+          class="password-toggle"
+          (click)="togglePasswordVisibility()"
+          [attr.aria-label]="passwordVisible ? 'Hide password' : 'Show password'">
+            <img
+            [src]="passwordVisible ? '/icons/visibility_off.svg' : '/icons/visibility.svg' " 
+            [alt]="passwordVisible ? 'Hide password' : 'Show password' " />  
+          </button>
+          </div>
+        </div>
+
+        @if (loginForm.controls.password.touched && loginForm.controls.password.hasError('required')) {
+          <small class="error-message">
+            Password is required.
+          </small>
+        }
+
+        @if (loginForm.controls.password.touched && loginForm.controls.password.hasError('minlength')) {
+          <small class="error-message">
+            Password must contain at least 8 characters.
+          </small>
+        }
+
+
+
+        <div class="form-options">
+          <label class="remember-me">
+            <input type="checkbox" formControlName="rememberMe" />
+            Remember me
+          </label>
+
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit">Sign in</button>
+      </form>
+
+      <p class="register-link">
+        Don't have an account?
+        <a href="/register">Create one</a>
+      </p>
+    </div>
+
+  </div>
+
+</div>

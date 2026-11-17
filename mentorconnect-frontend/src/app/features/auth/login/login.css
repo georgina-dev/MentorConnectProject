@@ -1,0 +1,200 @@
+
+/* Overall page */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F3F0E6;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+/* Main login card */
+.login-card {
+  width: 100%;
+  max-width: 450px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(24, 63, 53, 0.12);
+}
+
+/* Branding section */
+.brand {
+  background-color: #183F35;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+}
+
+.brand p {
+  margin: 8px 0 0;
+  color: #F3F0E6;
+  font-size: 14px;
+}
+
+/* Login content */
+.login-content {
+  padding: 35px 30px;
+}
+
+.login-content h2 {
+  color: #183F35;
+  margin: 0 0 8px;
+  font-size: 25px;
+}
+
+.subtitle {
+  color: #647067;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.error-message{
+  color: #B42318;
+  display: block;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+/* Form fields */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: #303832;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #D9DED7;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #789B78;
+  box-shadow: 0 0 0 3px rgba(120, 155, 120, 0.15);
+}
+
+/* Remember me and forgot password */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  font-size: 13px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #303832;
+}
+
+.form-options a,
+.register-link a {
+  color: #183F35;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-container input {
+  width: 100%;
+  padding: 13px 45px 13px 13px;
+  border: 1px solid #D9DED7;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.password-toggle{
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 5px;
+  border: none;
+  display: flex;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.password-toggle img {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.password-toggle:hover {
+  background-color: transparent;
+}
+
+/* Login button */
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #183F35;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #245747;
+}
+
+/* Registration link */
+.register-link {
+  text-align: center;
+  color: #647067;
+  font-size: 14px;
+  margin: 25px 0 0;
+}
+
+input:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #C5A45D;
+  outline-offset: 3px;
+  /* border-radius? */
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .login-content {
+    padding: 28px 20px;
+  }
+
+  .form-options {
+    flex-wrap: wrap;
+  }
+}
