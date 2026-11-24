@@ -7,6 +7,22 @@ ng serve (http://localhost:4200/)
 .\.venv\Scripts\Activate.ps1
 -- python manage.py runserver (http://127/0/0:8000/)
 
+-- slight change: (Django)
+1. check Django's version
+./mentorconnect-env/Scripts/python.exe -m django --version
+
+2. run Django development server
+./mentorconnect-env/Scripts/python.exe manage.py runserver
+
+3. to install other packages
+./mentorconnect-env/Scripts/python.exe -m pip install package-name
+
+-- something to do with the requirements.txt file:
+1. to generate the file - it holds info about packages, libraries and other tools your project needs to operate.
+./mentorconnect-env/Scripts/python.exe -m pip freeze > requirements.txt
+python -m pip install -r requirements.txt
+
+
 ~ PostgreSQL (database)
 -- start PostgreSQL server:
 & "C:\Program Files\PostgreSQL\18\bin\pg_ctl.exe" start -D "C:\Program Files\PostgreSQL\18\data" -l "$env:TEMP\postgresql-startup.log"
@@ -19,3 +35,41 @@ Postgre
 Django
    |
 Angular
+
+-- activating virtual environment:
+1. Powershell / VSCode terminal
+.\.venv\bin\Activate.ps1
+
+2. git bash
+source .venv/bin/activate
+
+-- updated: source mentorconnect-env/Scripts/activate
+
+-- verify activation:
+python --version
+
+and
+
+python -c "import sys; print(sys.executable)"
+
+-- to deactivate the virtual environment:
+deactivate
+
+-- to remove a virtual environment:
+rm -rf mentorconnect-env
+
+-- to view python packages:
+1. all
+python -m pip list
+
+2. specific
+python -m pip show package_name
+
+-- git (paste and copy commands)
+1. Paste: Shift + Insert
+2. Copy: Ctrl + Insert
+
+-- upgrading pip
+./mentorconnect-env/Scripts/python.exe -m pip install --upgrade pip
+
+verify the upgrade: ./mentorconnect-env/Scripts/python.exe -m pip --version
